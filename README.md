@@ -2,6 +2,7 @@ Lag-Llama: Reproducing Experiments
 This repository demonstrates how to reproduce experiments from the paper Lag-Llama: Towards Foundation Models for Probabilistic Time Series Forecasting using the codebase provided at Lag-Llama GitHub Repository. 
 
 Getting Started
+
 1. Clone the Repository 
 First, clone the original Lag-Llama repository:
 bash
@@ -10,15 +11,16 @@ cd lag-llama
 
 2. Install Dependencies
 Set up a new Python environment and install the required dependencies:
-bash
+conda create -n lag-llama python=3.10.8
+conda activate lag-llama
 pip install -r requirements.txt
 
-3. Download Datasets
+4. Download Datasets
 Download the necessary datasets from here, and extract them into the datasets/ folder:
 bash
 tar -xvzf nonmonash_datasets.tar.gz -C datasets
 
-4. Run Pretraining
+5. Run Pretraining
 To replicate the pretraining process, execute the pretraining script:
 bash
 python run.py \
@@ -28,7 +30,7 @@ python run.py \
     --all_datasets "weather" "pedestrian_counts" "exchange_rate" "ett_m2" ... \
     --num_workers 2 --args_from_dict_path configs/lag_llama.json --lr 0.0001
    
-5. Run Fine-tuning
+6. Run Fine-tuning
 Once pretraining is complete, fine-tune the model on specific datasets like Weather:
 bash
 python run.py \
