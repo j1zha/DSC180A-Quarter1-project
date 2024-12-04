@@ -18,8 +18,8 @@ pip install -r requirements.txt
 Download the necessary datasets from here, and extract them into the datasets/ folder:\
 tar -xvzf nonmonash_datasets.tar.gz -C datasets
 
-Adjustments and Challenges
-Modified Epochs
+Adjustments and Challenges\
+Modified Epochs\
 To save time and computational resources, the number of training epochs was reduced from the original 1000 to 5. While this impacts the model's final performance, it was sufficient for validating the reproducibility of the paper's methodology.
 
 Manual Checkpoint Path Adjustment
