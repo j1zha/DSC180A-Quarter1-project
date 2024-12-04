@@ -39,9 +39,9 @@ python run.py \
    
 Reproducibility\
 After running the fine-tuning script, you should see the following CRPS results in the log file:\
-- Weather: 0.1428 (Reproduced result)\
+- Weather: 0.1428 (Reproduced result)
   
-Clone the original repository.\
+Clone the original repository.
 Follow the dataset preparation and dependency installation steps.\
 Run the provided run.py scripts for both pretraining and fine-tuning.\
 Acknowledgements\
