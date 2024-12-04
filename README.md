@@ -18,7 +18,19 @@ pip install -r requirements.txt
 Download the necessary datasets from here, and extract them into the datasets/ folder:\
 tar -xvzf nonmonash_datasets.tar.gz -C datasets
 
-5. Run Pretraining
+Adjustments and Challenges
+Modified Epochs
+To save time and computational resources, the number of training epochs was reduced from the original 1000 to 5. While this impacts the model's final performance, it was sufficient for validating the reproducibility of the paper's methodology.\
+
+Manual Checkpoint Path Adjustment
+One of the key challenges arose during the fine-tuning stage. The script attempted to locate a pretraining checkpoint file automatically for initialization. However, the default script setup could not find the desired checkpoint file, and as a result, the process failed.\
+
+To address this:
+I manually identified the path of the checkpoint file generated during the pretraining stage.\
+Moved the file to the appropriate fine-tuning directory.\
+Updated the script to correctly load the checkpoint for fine-tuning.
+
+6. Run Pretraining
 To replicate the pretraining process, execute the pretraining script:
 python run.py \
     -e pretraining_lag_llama -d "datasets" --seed 42 \
@@ -27,7 +39,7 @@ python run.py \
     --all_datasets "weather" "pedestrian_counts" "exchange_rate" "ett_m2" ... \
     --num_workers 2 --args_from_dict_path configs/lag_llama.json --lr 0.0001
    
-6. Run Fine-tuning
+7. Run Fine-tuning
 Once pretraining is complete, fine-tune the model on specific datasets like Weather:
 python run.py \
     -e pretraining_lag_llama_finetune_on_weather -d "datasets" --seed 42 \
