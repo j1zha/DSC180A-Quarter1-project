@@ -1,5 +1,6 @@
 Lag-Llama: Reproducing Experiments 
 This repository demonstrates how to reproduce experiments from the paper Lag-Llama: Towards Foundation Models for Probabilistic Time Series Forecasting using the codebase provided at Lag-Llama GitHub Repository. 
+Due to the sudden change of research project topic on November 25th and the time limitation, I only had time to reproduce the model’s performance on the Weather dataset. I used the pretraining script provided in the original repository and restricted our experiment to the Weather dataset.
 
 Getting Started
 
@@ -48,8 +49,9 @@ python run.py \
     --lr 0.00001 --num_validation_windows 1 --single_dataset_last_k_percentage 100
    
 Reproducibility\
-After running the fine-tuning script, you should see the following CRPS results in the log file:\
-- Weather: 0.1428 (Reproduced result)
+After running the scripts, you should see the following CRPS results in the log file:\
+- Weather: 0.1428 (Reproduced result from finetuning script)
+- Weather: 0.2037 (Reproduced result from pretraining script)
   
 Clone the original repository.
 Follow the dataset preparation and dependency installation steps.\
