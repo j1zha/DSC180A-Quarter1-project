@@ -12,23 +12,23 @@ cd lag-llama
 Set up a new Python environment and install the required dependencies:\
 conda create -n lag-llama python=3.10.8\
 conda activate lag-llama\
-pip install -r requirements.txt\
+pip install -r requirements.txt
 
 4. Download Datasets
 Download the necessary datasets from here, and extract them into the datasets/ folder:\
-tar -xvzf nonmonash_datasets.tar.gz -C datasets\
+tar -xvzf nonmonash_datasets.tar.gz -C datasets
 
 5. Run Pretraining
-To replicate the pretraining process, execute the pretraining script:\
+To replicate the pretraining process, execute the pretraining script:
 python run.py \
     -e pretraining_lag_llama -d "datasets" --seed 42 \
     -r "experiments/results" \
     --batch_size 512 -m 1000 -n 128 \
     --all_datasets "weather" "pedestrian_counts" "exchange_rate" "ett_m2" ... \
-    --num_workers 2 --args_from_dict_path configs/lag_llama.json --lr 0.0001\
+    --num_workers 2 --args_from_dict_path configs/lag_llama.json --lr 0.0001
    
 6. Run Fine-tuning
-Once pretraining is complete, fine-tune the model on specific datasets like Weather:\
+Once pretraining is complete, fine-tune the model on specific datasets like Weather:
 python run.py \
     -e pretraining_lag_llama_finetune_on_weather -d "datasets" --seed 42 \
     -r "experiments/results" \
@@ -45,4 +45,4 @@ Clone the original repository.
 Follow the dataset preparation and dependency installation steps.\
 Run the provided run.py scripts for both pretraining and fine-tuning.\
 Acknowledgements\
-This work reproduces experiments using the official codebase provided at Lag-Llama GitHub Repository.\
+This work reproduces experiments using the official codebase provided at Lag-Llama GitHub Repository.
