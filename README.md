@@ -41,7 +41,10 @@ python run.py \
     --get_ckpt_path_from_experiment_name pretraining_lag_llama \
     --lr 0.00001 --num_validation_windows 1 --single_dataset_last_k_percentage 100
    
-Reproducibility
+Reproducibility\
+After running the fine-tuning script, you should see the following CRPS results in the log file:\
+- Weather: 0.1428 (Reproduced result)\
+  
 Clone the original repository.\
 Follow the dataset preparation and dependency installation steps.\
 Run the provided run.py scripts for both pretraining and fine-tuning.\
