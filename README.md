@@ -7,9 +7,9 @@ Getting Started
 1. Clone the Repository 
 First, clone the original Lag-Llama repository:\
 git clone https://github.com/time-series-foundation-models/lag-llama.git\
-cd lag-llama
-
-2. Install Dependencies
+cd lag-llama\
+(I have also attached the required files on our Github, in case you don't want to clone the original paper github)
+3. Install Dependencies
 Set up a new Python environment and install the required dependencies:\
 conda create -n lag-llama python=3.10.8\
 conda activate lag-llama\
