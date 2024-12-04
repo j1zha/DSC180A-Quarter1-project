@@ -53,7 +53,7 @@ After running the scripts, you should see the following CRPS results in the log 
 - Weather: 0.1428 (Reproduced result from finetuning script)
 - Weather: 0.2037 (Reproduced result from pretraining script)
   
-Clone the original repository.
+Clone the original repository.\
 Follow the dataset preparation and dependency installation steps.\
 Run the provided run.py scripts for both pretraining and fine-tuning.\
 Acknowledgements\
