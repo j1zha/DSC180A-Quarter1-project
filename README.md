@@ -20,10 +20,10 @@ tar -xvzf nonmonash_datasets.tar.gz -C datasets
 
 Adjustments and Challenges
 Modified Epochs
-To save time and computational resources, the number of training epochs was reduced from the original 1000 to 5. While this impacts the model's final performance, it was sufficient for validating the reproducibility of the paper's methodology.\
+To save time and computational resources, the number of training epochs was reduced from the original 1000 to 5. While this impacts the model's final performance, it was sufficient for validating the reproducibility of the paper's methodology.
 
 Manual Checkpoint Path Adjustment
-One of the key challenges arose during the fine-tuning stage. The script attempted to locate a pretraining checkpoint file automatically for initialization. However, the default script setup could not find the desired checkpoint file, and as a result, the process failed.\
+One of the key challenges arose during the fine-tuning stage. The script attempted to locate a pretraining checkpoint file automatically for initialization. However, the default script setup could not find the desired checkpoint file, and as a result, the process failed.
 
 To address this:
 I manually identified the path of the checkpoint file generated during the pretraining stage.\
