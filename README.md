@@ -55,6 +55,6 @@ After running the scripts, you should see the following CRPS results in the log 
   
 Clone the original repository.\
 Follow the dataset preparation and dependency installation steps.\
-Run the provided run.py scripts for both pretraining and fine-tuning.\
+Run the provided finetune and pretrain scripts for both pretraining and fine-tuning.\
 Acknowledgements\
 This work reproduces experiments using the official codebase provided at Lag-Llama GitHub Repository.
